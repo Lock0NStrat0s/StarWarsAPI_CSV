@@ -17,19 +17,34 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        while(true)
+        bool isRunning = true;
+        do
         {
             Console.Clear();
             Console.Write("Welcome to the Star Wars Database!\n\nOptions:\n1: People\n2: Planets\n3: Starships\n4: Films\n5: Species\n6: Vehicles\n\nYour selection: ");
 
             IDataModel dataModel = DataModelFactory.GetDataModelType(Console.ReadLine());
 
-            Console.Write($"Enter the ID of the {dataModel.ResponseName} you want to see: ");
-            string id = Console.ReadLine();
+            if (dataModel != null)
+            {
+                Console.Write($"Enter the ID of the {dataModel.ResponseName} you want to see: ");
+                string id = Console.ReadLine();
+                if (id != null)
+                {
+                    GetInfo(id, dataModel).Wait();
+                }
+                else
+                {
+                    isRunning = false;
+                }
+            }
+            else
+            {
+                isRunning = false;
+            }
 
-            GetInfo(id, dataModel).Wait();
             Console.ReadKey();
-        }
+        } while (isRunning);
     }
     static async Task GetInfo(string id, IDataModel dataModel)
     {
