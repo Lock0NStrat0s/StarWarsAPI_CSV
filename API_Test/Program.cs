@@ -23,15 +23,32 @@ internal class Program
             Console.Clear();
             Console.Write("Welcome to the Star Wars Database!\n\nOptions:\n1: People\n2: Planets\n3: Starships\n4: Films\n5: Species\n6: Vehicles\n\nYour selection: ");
 
-            IDataModel dataModel = DataModelFactory.GetDataModelType(Console.ReadLine());
+            IDataModel dataModel = null;
+            try
+            {
+                dataModel = DataModelFactory.GetDataModelType(Console.ReadLine());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+;
 
             if (dataModel != null)
             {
                 Console.Write($"Enter the ID of the {dataModel.ResponseName} you want to see: ");
                 string id = Console.ReadLine();
-                if (id != null)
+                if (!String.IsNullOrEmpty(id))
                 {
-                    GetInfo(id, dataModel).Wait();
+                    try
+                    {
+                        GetInfo(id, dataModel).Wait();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+
                 }
                 else
                 {
