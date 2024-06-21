@@ -17,14 +17,19 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Welcome to the Star Wars Database!\n\nOptions:\n1: People\n2: Planets\n3: Starships\n4: Films\n5: Species\n6: Vehicles\n\nYour selection: ");
+        while(true)
+        {
+            Console.Clear();
+            Console.Write("Welcome to the Star Wars Database!\n\nOptions:\n1: People\n2: Planets\n3: Starships\n4: Films\n5: Species\n6: Vehicles\n\nYour selection: ");
 
-        IDataModel dataModel = DataModelFactory.GetDataModelType(Console.ReadLine());
+            IDataModel dataModel = DataModelFactory.GetDataModelType(Console.ReadLine());
 
-        Console.Write($"Enter the ID of the {dataModel.ResponseName} you want to see: ");
-        string id = Console.ReadLine();
+            Console.Write($"Enter the ID of the {dataModel.ResponseName} you want to see: ");
+            string id = Console.ReadLine();
 
-        GetInfo(id, dataModel).Wait();
+            GetInfo(id, dataModel).Wait();
+            Console.ReadKey();
+        }
     }
     static async Task GetInfo(string id, IDataModel dataModel)
     {
@@ -42,7 +47,7 @@ internal class Program
             return response;
         }
     }
-    
+
     //static void WriteDataToCSV<T>(List<T> records, string filePath)
     //{
     //    using (var writer = new StreamWriter(filePath))
