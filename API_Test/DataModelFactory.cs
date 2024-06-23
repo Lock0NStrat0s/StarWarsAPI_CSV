@@ -11,42 +11,42 @@ namespace API_Test;
 
 internal static class DataModelFactory
 {
-    public static IFullDataModel GetFullDataModelType(string dataType)
+    public static string GetFullDataModelType(string dataType)
     {
         switch (dataType.ToLower())
         {
             case "1":
-                return new PeopleFullDataModel();
+                return "people";
             case "2":
-                return new PlanetFullDataModel();
+                return "People";
             case "3":
-                return new StarshipFullDataModel();
+                return "People";
             case "4":
-                return new FilmFullDataModel();
+                return "People";
             case "5":
-                return new SpeciesFullDataModel();
+                return "People";
             case "6":
-                return new VehicleFullDataModel();
+                return "People";
             default:
-                return null;
+                return "null";
         }
     }
-    public static IFullDataModel GetFullDeserializedModel(string data, IFullDataModel dataModel)
+    public static IFullDataModel GetFullDeserializedModel(string data, string param)
     {
-        switch (dataModel.ResponseName)
+        switch (param)
         {
             case "people":
                 return JsonConvert.DeserializeObject<PeopleFullDataModel>(data);
-            case "films":
-                return JsonConvert.DeserializeObject<FilmFullDataModel>(data);
-            case "starships":
-                return JsonConvert.DeserializeObject<StarshipFullDataModel>(data);
-            case "vehicles":
-                return JsonConvert.DeserializeObject<VehicleFullDataModel>(data);
-            case "species":
-                return JsonConvert.DeserializeObject<SpeciesFullDataModel>(data);
-            case "planets":
-                return JsonConvert.DeserializeObject<PlanetFullDataModel>(data);
+            //case "films":
+            //    return JsonConvert.DeserializeObject<FilmFullDataModel>(data);
+            //case "starships":
+            //    return JsonConvert.DeserializeObject<StarshipFullDataModel>(data);
+            //case "vehicles":
+            //    return JsonConvert.DeserializeObject<VehicleFullDataModel>(data);
+            //case "species":
+            //    return JsonConvert.DeserializeObject<SpeciesFullDataModel>(data);
+            //case "planets":
+            //    return JsonConvert.DeserializeObject<PlanetFullDataModel>(data);
             default:
                 return null;
         }

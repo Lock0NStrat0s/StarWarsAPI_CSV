@@ -24,7 +24,6 @@ public class FilmDataModel : IDataModel
     public DateTime created { get; set; }
     public DateTime edited { get; set; }
     public string url { get; set; }
-    public string ResponseName { get => "films"; }
     public void Display()
     {
         Console.ForegroundColor = ConsoleColor.DarkBlue;

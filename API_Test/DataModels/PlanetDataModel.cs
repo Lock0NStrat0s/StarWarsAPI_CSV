@@ -23,7 +23,6 @@ public class PlanetDataModel : IDataModel
     public DateTime created { get; set; }
     public DateTime edited { get; set; }
     public string url { get; set; }
-    public string ResponseName { get => "planets"; }
     public void Display()
     {
         Console.ForegroundColor = ConsoleColor.DarkGray;

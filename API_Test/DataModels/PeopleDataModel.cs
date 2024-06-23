@@ -41,7 +41,6 @@ public class PeopleDataModel : IDataModel
     public DateTime Created { get; set; }
     [JsonProperty("edited")]
     public DateTime Edited { get; set; }
-    public string ResponseName { get => "people"; }
     public void Display()
     {
         Console.ForegroundColor = ConsoleColor.DarkMagenta;

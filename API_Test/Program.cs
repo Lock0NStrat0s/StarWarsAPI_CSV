@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.IO;
+﻿using API_Test.DataModels;
+using API_Test.FullResponseDataModels;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System.Globalization;
-using System.Reflection;
-using API_Test.DataModels;
-using System.Net;
-using API_Test.FullResponseDataModels;
 
 namespace API_Test;
 
@@ -31,14 +23,14 @@ internal class Program
             {
                 if (userInput == "1")
                 {
-                    IFullDataModel fullDataModel = CreateFullDataModel(GetUserInputSelectEndpoint());
-                    if (fullDataModel == null)
+                    var urlParameter = CreateFullDataModel(GetUserInputSelectEndpoint());
+                    if (urlParameter == null)
                     {
                         isRunning = false;
-                    }    
+                    }
                     else
                     {
-                        CallFullModelAPI(fullDataModel);
+                        CallFullModelAPI(urlParameter);
                     }
                 }
                 else
@@ -54,7 +46,7 @@ internal class Program
                     }
                 }
             }
-            Console.Write("Press any key to continue: ");
+            Console.Write("\nPress any key to continue: ");
             Console.ReadKey();
 
         } while (isRunning);
@@ -79,7 +71,7 @@ internal class Program
     #endregion
 
     #region CREATE DATA MODEL
-    private static IFullDataModel CreateFullDataModel(string response)
+    private static string CreateFullDataModel(string response)
     {
         try
         {
@@ -109,11 +101,11 @@ internal class Program
     #endregion
 
     #region CALL API
-    public static void CallFullModelAPI(IFullDataModel singleDataModel)
+    public static void CallFullModelAPI(string param)
     {
         try
         {
-            GetFullModelInfo(singleDataModel).Wait();
+            GetFullModelInfo(param).Wait();
         }
         catch (Exception ex)
         {
@@ -141,9 +133,9 @@ internal class Program
     #endregion
 
     #region GET INFO FROM DB
-    static async Task GetFullModelInfo(IFullDataModel fullDataModel)
+    static async Task GetFullModelInfo(string param)
     {
-        var endpoint = $"https://swapi.dev/api/{fullDataModel.ResponseName}/";
+        var endpoint = $"https://swapi.dev/api/{param}/";
         var data = "";
         try
         {
@@ -153,11 +145,13 @@ internal class Program
         {
             Console.WriteLine(ex.Message);
         }
-        var records = DataModelFactory.GetFullDeserializedModel(data, fullDataModel);
+
+        var records = DataModelFactory.GetFullDeserializedModel(data, param);
 
         try
         {
-            //records.results.ForEach(x => Console.WriteLine(x));
+            records.PrintResults();
+            records.ReturnResponseName();           
             //WriteDataToCSV(records, "C:\\Users\\moham\\OneDrive\\Desktop\\API.csv");
         }
         catch (Exception ex)

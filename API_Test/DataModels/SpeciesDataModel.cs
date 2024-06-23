@@ -24,7 +24,6 @@ public class SpeciesDataModel : IDataModel
     public DateTime created { get; set; }
     public DateTime edited { get; set; }
     public string url { get; set; }
-    public string ResponseName { get => "species"; }
     public void Display()
     {
         Console.ForegroundColor = ConsoleColor.DarkYellow;
