@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace API_Test.DataModels;
 
-internal interface IDataModel
+public interface IDataModel
 {
-    public string ResponseName { get;} 
+    public string ResponseName { get; }
     void Display();
 }

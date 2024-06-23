@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Reflection;
 using API_Test.DataModels;
 using System.Net;
+using API_Test.FullResponseDataModels;
 
 namespace API_Test;
 
@@ -25,32 +26,32 @@ internal class Program
             if (userInput != "1" && userInput != "2")
             {
                 isRunning = false;
-                break;
             }
             else
             {
-                IDataModel dataModel = null;
                 if (userInput == "1")
                 {
-                    dataModel = CreateFullDataModel(GetUserInputSelectEndpoint());
-                    if (dataModel != null)
+                    IFullDataModel fullDataModel = CreateFullDataModel(GetUserInputSelectEndpoint());
+                    if (fullDataModel == null)
                     {
-                        CallFullModelAPI(dataModel);
+                        isRunning = false;
                     }    
+                    else
+                    {
+                        CallFullModelAPI(fullDataModel);
+                    }
                 }
                 else
                 {
-                    dataModel = CreateSingleDataModel(GetUserInputSelectEndpoint());
-                    if (dataModel != null)
+                    IDataModel singleDataModel = CreateSingleDataModel(GetUserInputSelectEndpoint());
+                    if (singleDataModel == null)
                     {
-                        CallSingleModelAPI(dataModel);
+                        isRunning = false;
                     }
-                }
-
-                if (dataModel == null)
-                {
-                    isRunning = false;
-                    break;
+                    else
+                    {
+                        CallSingleModelAPI(singleDataModel);
+                    }
                 }
             }
             Console.Write("Press any key to continue: ");
@@ -78,43 +79,41 @@ internal class Program
     #endregion
 
     #region CREATE DATA MODEL
-    private static IDataModel CreateFullDataModel(string response)
+    private static IFullDataModel CreateFullDataModel(string response)
     {
-        IDataModel dataModel = null;
         try
         {
-            dataModel = DataModelFactory.GetFullDataModelType<>(response);  //ERROR
+            return DataModelFactory.GetFullDataModelType(response);
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
 
-        return dataModel;
+        return null;
     }
 
     private static IDataModel CreateSingleDataModel(string response)
     {
-        IDataModel dataModel = null;
         try
         {
-            dataModel = DataModelFactory.GetSingleDataModelType(response);
+            return DataModelFactory.GetSingleDataModelType(response);
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
 
-        return dataModel;
+        return null;
     }
     #endregion
 
     #region CALL API
-    public static void CallFullModelAPI(IDataModel dataModel)
+    public static void CallFullModelAPI(IFullDataModel singleDataModel)
     {
         try
         {
-            GetFullModelInfo(dataModel).Wait();
+            GetFullModelInfo(singleDataModel).Wait();
         }
         catch (Exception ex)
         {
@@ -122,16 +121,16 @@ internal class Program
         }
     }
 
-    public static void CallSingleModelAPI(IDataModel dataModel)
+    public static void CallSingleModelAPI(IDataModel singleDataModel)
     {
-        Console.Write($"Enter the ID of the \"{dataModel.ResponseName}\" to display: ");
+        Console.Write($"Enter the ID of the \"{singleDataModel.ResponseName}\" to display: ");
         string id = Console.ReadLine();
 
         if (!String.IsNullOrEmpty(id))
         {
             try
             {
-                GetSingleModelInfo(id, dataModel).Wait();
+                GetSingleModelInfo(id, singleDataModel).Wait();
             }
             catch (Exception ex)
             {
@@ -142,15 +141,23 @@ internal class Program
     #endregion
 
     #region GET INFO FROM DB
-    static async Task GetFullModelInfo(IDataModel dataModel)
+    static async Task GetFullModelInfo(IFullDataModel fullDataModel)
     {
-        var endpoint = $"https://swapi.dev/api/{dataModel.ResponseName}/";
-        var data = await FetchDataFromAPI(endpoint); //try catch
-        var records = DataModelFactory.GetFullDeserializedModel</*need type here*/>(data, dataModel);   //ERROR
+        var endpoint = $"https://swapi.dev/api/{fullDataModel.ResponseName}/";
+        var data = "";
+        try
+        {
+            data = await FetchDataFromAPI(endpoint);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        var records = DataModelFactory.GetFullDeserializedModel(data, fullDataModel);
 
         try
         {
-            //Console.WriteLine(records);
+            //records.results.ForEach(x => Console.WriteLine(x));
             //WriteDataToCSV(records, "C:\\Users\\moham\\OneDrive\\Desktop\\API.csv");
         }
         catch (Exception ex)
@@ -159,11 +166,19 @@ internal class Program
         }
     }
 
-    static async Task GetSingleModelInfo(string id, IDataModel dataModel)
+    static async Task GetSingleModelInfo(string id, IDataModel singleDataModel)
     {
-        var endpoint = $"https://swapi.dev/api/{dataModel.ResponseName}/{id}/";
-        var data = await FetchDataFromAPI(endpoint); //try catch
-        var record = DataModelFactory.GetSingleDeserializedModel(data, dataModel);
+        var endpoint = $"https://swapi.dev/api/{singleDataModel.ResponseName}/{id}/";
+        var data = "";
+        try
+        {
+            data = await FetchDataFromAPI(endpoint);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        var record = DataModelFactory.GetSingleDeserializedModel(data, singleDataModel);
 
         record.Display();
     }

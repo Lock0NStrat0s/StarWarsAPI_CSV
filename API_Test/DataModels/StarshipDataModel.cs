@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace API_Test.DataModels;
 
-internal class StarshipDataModel : IDataModel
+public class StarshipDataModel : IDataModel
 {
     public string name { get; set; }
     public string model { get; set; }

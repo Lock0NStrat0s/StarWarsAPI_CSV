@@ -5,14 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API_Test.FullResponseDataModels
+namespace API_Test.FullResponseDataModels;
+
+public class SpeciesFullDataModel : IFullDataModel
 {
-    internal class SpeciesFullDataModel : IFullDataModel<SpeciesDataModel>
-    {
-        public int count { get; set; }
-        public string next { get; set; }
-        public string previous { get; set; }
-        public List<SpeciesDataModel> results { get; set; }
-        public string ResponseName { get => "species"; }
-    }
+    public int count { get; set; }
+    public string next { get; set; }
+    public string previous { get; set; }
+    public List<IDataModel> results { get; set; }
+    public string ResponseName { get => "species"; }
 }

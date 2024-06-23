@@ -11,42 +11,42 @@ namespace API_Test;
 
 internal static class DataModelFactory
 {
-    public static IFullDataModel<T> GetFullDataModelType<T>(string dataType)
+    public static IFullDataModel GetFullDataModelType(string dataType)
     {
         switch (dataType.ToLower())
         {
             case "1":
-                return (IFullDataModel<T>)new PeopleFullDataModel();
+                return new PeopleFullDataModel();
             case "2":
-                return (IFullDataModel<T>)new PlanetFullDataModel();
+                return new PlanetFullDataModel();
             case "3":
-                return (IFullDataModel<T>)new StarshipFullDataModel();
+                return new StarshipFullDataModel();
             case "4":
-                return (IFullDataModel<T>)new FilmFullDataModel();
+                return new FilmFullDataModel();
             case "5":
-                return (IFullDataModel<T>)new SpeciesFullDataModel();
+                return new SpeciesFullDataModel();
             case "6":
-                return (IFullDataModel<T>)new VehicleFullDataModel();
+                return new VehicleFullDataModel();
             default:
                 return null;
         }
     }
-    public static IFullDataModel<T> GetFullDeserializedModel<T>(string data, IFullDataModel<T> dataModel)
+    public static IFullDataModel GetFullDeserializedModel(string data, IFullDataModel dataModel)
     {
         switch (dataModel.ResponseName)
         {
             case "people":
-                return (IFullDataModel<T>)JsonConvert.DeserializeObject<PeopleFullDataModel>(data);
+                return JsonConvert.DeserializeObject<PeopleFullDataModel>(data);
             case "films":
-                return (IFullDataModel<T>)JsonConvert.DeserializeObject<FilmFullDataModel>(data);
+                return JsonConvert.DeserializeObject<FilmFullDataModel>(data);
             case "starships":
-                return (IFullDataModel<T>)JsonConvert.DeserializeObject<StarshipFullDataModel>(data);
+                return JsonConvert.DeserializeObject<StarshipFullDataModel>(data);
             case "vehicles":
-                return (IFullDataModel<T>)JsonConvert.DeserializeObject<VehicleFullDataModel>(data);
+                return JsonConvert.DeserializeObject<VehicleFullDataModel>(data);
             case "species":
-                return (IFullDataModel<T>)JsonConvert.DeserializeObject<SpeciesFullDataModel>(data);
+                return JsonConvert.DeserializeObject<SpeciesFullDataModel>(data);
             case "planets":
-                return (IFullDataModel<T>)JsonConvert.DeserializeObject<PlanetFullDataModel>(data);
+                return JsonConvert.DeserializeObject<PlanetFullDataModel>(data);
             default:
                 return null;
         }
