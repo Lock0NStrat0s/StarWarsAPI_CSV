@@ -9,14 +9,11 @@ public class PeopleFullDataModel : IFullDataModel
     public string previous { get; set; }
     public List<PeopleDataModel> results { get; set; }
 
-    public void PrintResults()
+    public void RecordResults()
     {
         foreach (var item in results)
         {
             // Print Whatever you want//
         }
     }
-
-    public string ReturnResponseName() => "people";
-
 }

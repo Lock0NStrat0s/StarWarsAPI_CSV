@@ -13,9 +13,25 @@ internal class Program
         bool isRunning = true;
         do
         {
-            string userInput = GetUserInputFullOrSingleResponse();
+            isRunning = RunApplication(isRunning);
+            Console.Write("\nPress any key to continue: ");
+            Console.ReadKey();
 
-            if (userInput != "1" && userInput != "2")
+        } while (isRunning);
+    }
+
+    #region RUN APPLICATION
+    private static bool RunApplication(bool isRunning)
+    {
+        string userInput = GetUserInputFullOrSingleResponse();
+        if (userInput != "1" && userInput != "2")
+        {
+            isRunning = false;
+        }
+        else
+        {
+            var urlParameter = GetUserEndpoint(GetUserInputSelectEndpoint());
+            if (urlParameter == null)
             {
                 isRunning = false;
             }
@@ -23,40 +39,24 @@ internal class Program
             {
                 if (userInput == "1")
                 {
-                    var urlParameter = CreateFullDataModel(GetUserInputSelectEndpoint());
-                    if (urlParameter == null)
-                    {
-                        isRunning = false;
-                    }
-                    else
-                    {
-                        CallFullModelAPI(urlParameter);
-                    }
+                    CallFullModelAPI(urlParameter);
                 }
                 else
                 {
-                    IDataModel singleDataModel = CreateSingleDataModel(GetUserInputSelectEndpoint());
-                    if (singleDataModel == null)
-                    {
-                        isRunning = false;
-                    }
-                    else
-                    {
-                        CallSingleModelAPI(singleDataModel);
-                    }
+                    CallSingleModelAPI(urlParameter);
                 }
             }
-            Console.Write("\nPress any key to continue: ");
-            Console.ReadKey();
+        }
 
-        } while (isRunning);
+        return isRunning;
     }
+    #endregion
 
     #region GET USER INPUT
     private static string GetUserInputFullOrSingleResponse()
     {
         Console.Clear();
-        Console.Write("Welcome to the Star Wars Database! (utilizing SWAPI)\n\nOptions:\n1: Full Response\n2: Single Response\nAny other key to EXIT\n\nYour Selection: ");
+        Console.Write("Welcome to the Star Wars Database! (utilizing SWAPI)\n\nOptions:\n1: FULL RESPONSE (data records will be stored in a csv file)\n2: SINGLE RESPONSE (data records will be displayed on console with nice fancy colours)\nAny other key to EXIT\n\nYour Selection: ");
 
         return Console.ReadLine();
     }
@@ -71,25 +71,11 @@ internal class Program
     #endregion
 
     #region CREATE DATA MODEL
-    private static string CreateFullDataModel(string response)
+    private static string GetUserEndpoint(string response)
     {
         try
         {
-            return DataModelFactory.GetFullDataModelType(response);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-
-        return null;
-    }
-
-    private static IDataModel CreateSingleDataModel(string response)
-    {
-        try
-        {
-            return DataModelFactory.GetSingleDataModelType(response);
+            return DataModelFactory.GetDataModelType(response);
         }
         catch (Exception ex)
         {
@@ -113,16 +99,16 @@ internal class Program
         }
     }
 
-    public static void CallSingleModelAPI(IDataModel singleDataModel)
+    public static void CallSingleModelAPI(string param)
     {
-        Console.Write($"Enter the ID of the \"{singleDataModel.ResponseName}\" to display: ");
+        Console.Write($"Enter the ID of the \"{param.ToUpper()}\" to display: ");
         string id = Console.ReadLine();
 
         if (!String.IsNullOrEmpty(id))
         {
             try
             {
-                GetSingleModelInfo(id, singleDataModel).Wait();
+                GetSingleModelInfo(param, id).Wait();
             }
             catch (Exception ex)
             {
@@ -150,8 +136,7 @@ internal class Program
 
         try
         {
-            records.PrintResults();
-            records.ReturnResponseName();           
+            records.RecordResults();
             //WriteDataToCSV(records, "C:\\Users\\moham\\OneDrive\\Desktop\\API.csv");
         }
         catch (Exception ex)
@@ -160,9 +145,9 @@ internal class Program
         }
     }
 
-    static async Task GetSingleModelInfo(string id, IDataModel singleDataModel)
+    static async Task GetSingleModelInfo(string param, string id)
     {
-        var endpoint = $"https://swapi.dev/api/{singleDataModel.ResponseName}/{id}/";
+        var endpoint = $"https://swapi.dev/api/{param}/{id}/";
         var data = "";
         try
         {

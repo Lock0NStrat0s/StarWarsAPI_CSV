@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using API_Test.DataModels;
+﻿using API_Test.DataModels;
 using API_Test.FullResponseDataModels;
 using Newtonsoft.Json;
 
@@ -11,22 +6,22 @@ namespace API_Test;
 
 internal static class DataModelFactory
 {
-    public static string GetFullDataModelType(string dataType)
+    public static string GetDataModelType(string dataType)
     {
         switch (dataType.ToLower())
         {
             case "1":
                 return "people";
             case "2":
-                return "People";
+                return "planets";
             case "3":
-                return "People";
+                return "starships";
             case "4":
-                return "People";
+                return "films";
             case "5":
-                return "People";
+                return "species";
             case "6":
-                return "People";
+                return "vehicles";
             default:
                 return "null";
         }
@@ -37,44 +32,23 @@ internal static class DataModelFactory
         {
             case "people":
                 return JsonConvert.DeserializeObject<PeopleFullDataModel>(data);
-            //case "films":
-            //    return JsonConvert.DeserializeObject<FilmFullDataModel>(data);
-            //case "starships":
-            //    return JsonConvert.DeserializeObject<StarshipFullDataModel>(data);
-            //case "vehicles":
-            //    return JsonConvert.DeserializeObject<VehicleFullDataModel>(data);
-            //case "species":
-            //    return JsonConvert.DeserializeObject<SpeciesFullDataModel>(data);
-            //case "planets":
-            //    return JsonConvert.DeserializeObject<PlanetFullDataModel>(data);
+            case "films":
+                return JsonConvert.DeserializeObject<FilmFullDataModel>(data);
+            case "starships":
+                return JsonConvert.DeserializeObject<StarshipFullDataModel>(data);
+            case "vehicles":
+                return JsonConvert.DeserializeObject<VehicleFullDataModel>(data);
+            case "species":
+                return JsonConvert.DeserializeObject<SpeciesFullDataModel>(data);
+            case "planets":
+                return JsonConvert.DeserializeObject<PlanetFullDataModel>(data);
             default:
                 return null;
         }
     }
-
-    public static IDataModel GetSingleDataModelType(string dataType)
+    public static IDataModel GetSingleDeserializedModel(string data, string param)
     {
-        switch (dataType.ToLower())
-        {
-            case "1":
-                return new PeopleDataModel();
-            case "2":
-                return new PlanetDataModel();
-            case "3":
-                return new StarshipDataModel();
-            case "4":
-                return new FilmDataModel();
-            case "5":
-                return new SpeciesDataModel();
-            case "6":
-                return new VehicleDataModel();
-            default:
-                return null;
-        }
-    }
-    public static IDataModel GetSingleDeserializedModel(string data, IDataModel dataModel)
-    {
-        switch (dataModel.ResponseName)
+        switch (param)
         {
             case "people":
                 return JsonConvert.DeserializeObject<PeopleDataModel>(data);

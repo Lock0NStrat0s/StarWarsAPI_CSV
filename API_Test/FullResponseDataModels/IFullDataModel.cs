@@ -5,7 +5,5 @@ public interface IFullDataModel
     public int count { get; set; }
     public string next { get; set; }
     public string previous { get; set; }
-    public void PrintResults();
-    public string ReturnResponseName();
-
+    public void RecordResults();
 }
