@@ -9,8 +9,14 @@ public class FilmFullDataModel : IFullDataModel
     public string previous { get; set; }
     public List<FilmDataModel> results { get; set; }
 
-    public void RecordResults()
+    public void RecordResults(bool isNextNull)
     {
-        throw new NotImplementedException();
+        Globals.FullFilmResults.Add(results);
+        if (isNextNull)
+        {
+            List<FilmDataModel> finalFilmRecords = Globals.FullFilmResults.SelectMany(x => x).OrderBy(x => x.episode_id).ToList();
+
+            Helper.WriteDataToCSV(finalFilmRecords, @"../../../CSV_Files/FilmData.csv");
+        }
     }
 }

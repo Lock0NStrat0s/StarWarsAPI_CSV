@@ -9,11 +9,14 @@ public class VehicleFullDataModel : IFullDataModel
     public string previous { get; set; }
     public List<VehicleDataModel> results { get; set; }
 
-    public void RecordResults()
+    public void RecordResults(bool isNextNull)
     {
-        foreach (var item in results)
+        Globals.FullVehicleResults.Add(results);
+        if (isNextNull)
         {
+            List<VehicleDataModel> finalVehicleRecords = Globals.FullVehicleResults.SelectMany(x => x).ToList();
 
+            Helper.WriteDataToCSV(finalVehicleRecords, @"../../../CSV_Files/VehicleData.csv");
         }
     }
 }

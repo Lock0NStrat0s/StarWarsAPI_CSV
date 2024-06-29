@@ -9,8 +9,14 @@ public class StarshipFullDataModel : IFullDataModel
     public string previous { get; set; }
     public List<StarshipDataModel> results { get; set; }
 
-    public void RecordResults()
+    public void RecordResults(bool isNextNull)
     {
-        throw new NotImplementedException();
+        Globals.FullStarshipResults.Add(results);
+        if (isNextNull)
+        {
+            List<StarshipDataModel> StarshipPeopleRecords = Globals.FullStarshipResults.SelectMany(x => x).ToList();
+
+            Helper.WriteDataToCSV(StarshipPeopleRecords, @"../../../CSV_Files/StarshipData.csv");
+        }
     }
 }

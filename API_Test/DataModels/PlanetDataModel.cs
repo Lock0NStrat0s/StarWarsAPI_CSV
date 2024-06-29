@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -37,4 +38,30 @@ public class PlanetDataModel : IDataModel
         Console.WriteLine($"Population: {population}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
     }
+    public string Films => (films != null && films.Any()) ? string.Join("; ", films.Select(a => a)) : string.Empty;
+    public string Residents => (residents != null && residents.Any()) ? string.Join("; ", residents.Select(a => a)) : string.Empty;
 }
+
+public class PlanetDataModelMap : ClassMap<PlanetDataModel>
+{
+    public PlanetDataModelMap()
+    {
+        Map(m => m.name);
+        Map(m => m.rotation_period);
+        Map(m => m.orbital_period);
+        Map(m => m.diameter);
+        Map(m => m.climate);
+        Map(m => m.gravity);
+        Map(m => m.terrain);
+        Map(m => m.surface_water);
+        Map(m => m.population);
+
+        Map(m => m.Films);
+        Map(m => m.Residents);
+
+        Map(m => m.url);
+        Map(m => m.created);
+        Map(m => m.edited);
+    }
+}
+

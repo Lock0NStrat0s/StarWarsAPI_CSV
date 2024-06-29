@@ -9,8 +9,13 @@ public class PlanetFullDataModel : IFullDataModel
     public string previous { get; set; }
     public List<PlanetDataModel> results { get; set; }
 
-    public void RecordResults()
+    public void RecordResults(bool isNextNull)
     {
-        throw new NotImplementedException();
+        Globals.FullPlanetResults.Add(results);
+        if (isNextNull)
+        {
+            List<PlanetDataModel> finalPlanetRecords = Globals.FullPlanetResults.SelectMany(x => x).ToList();
+            Helper.WriteDataToCSV(finalPlanetRecords, @"../../../CSV_Files/PlanetData.csv");
+        }
     }
 }

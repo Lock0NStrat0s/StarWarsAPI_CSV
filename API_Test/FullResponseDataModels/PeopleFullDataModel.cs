@@ -9,11 +9,14 @@ public class PeopleFullDataModel : IFullDataModel
     public string previous { get; set; }
     public List<PeopleDataModel> results { get; set; }
 
-    public void RecordResults()
+    public void RecordResults(bool isNextNull)
     {
-        foreach (var item in results)
+        Globals.FullPeopleResults.Add(results);
+        if (isNextNull)
         {
-            // Print Whatever you want//
+            List<PeopleDataModel> finalPeopleRecords = Globals.FullPeopleResults.SelectMany(x => x).ToList();
+
+            Helper.WriteDataToCSV(finalPeopleRecords, @"../../../CSV_Files/PeopleData.csv");
         }
     }
 }

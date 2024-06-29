@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -34,5 +35,31 @@ public class FilmDataModel : IDataModel
         Console.WriteLine($"Producer: {producer}");
         Console.WriteLine($"Release Date: {release_date}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
+    }
+    public string Characters => (characters != null && characters.Any()) ? string.Join("; ", characters.Select(a => a)) : string.Empty;
+    public string Planets => (planets != null && planets.Any()) ? string.Join("; ", planets.Select(a => a)) : string.Empty;
+    public string Starships => (starships != null && starships.Any()) ? string.Join("; ", starships.Select(a => a)) : string.Empty;
+    public string Vehicles => (vehicles != null && vehicles.Any()) ? string.Join("; ", vehicles.Select(a => a)) : string.Empty;
+    public string Species => (species != null && species.Any()) ? string.Join("; ", species.Select(a => a)) : string.Empty;
+}
+
+public class FilmDataModelMap : ClassMap<FilmDataModel>
+{
+    public FilmDataModelMap()
+    {
+        Map(m => m.title);
+        Map(m => m.episode_id);
+        Map(m => m.opening_crawl);
+        Map(m => m.director);
+        Map(m => m.producer);
+        Map(m => m.release_date);
+        Map(m => m.Characters);
+        Map(m => m.Planets);
+        Map(m => m.Starships);
+        Map(m => m.Vehicles);
+        Map(m => m.Species);
+        Map(m => m.created);
+        Map(m => m.edited);
+        Map(m => m.url);
     }
 }

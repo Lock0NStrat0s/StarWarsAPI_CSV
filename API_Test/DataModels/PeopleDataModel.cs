@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using CsvHelper.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,14 +29,12 @@ public class PeopleDataModel : IDataModel
     public string SkinColor { get; set; }
     [JsonProperty("homeworld")]
     public string Homeworld { get; set; }
-    [JsonProperty("films")]
-    public List<string> Films { get; set; }
-    [JsonProperty("species")]
-    public List<string> Species { get; set; }
-    [JsonProperty("starships")]
-    public List<string> Starships { get; set; }
-    [JsonProperty("vehicles")]
-    public List<string> Vehicles { get; set; }
+
+    public List<string> films { get; set; }
+    public List<string> species { get; set; }
+    public List<string> starships { get; set; }
+    public List<string> vehicles { get; set; }
+
     [JsonProperty("url")]
     public string Url { get; set; }
     [JsonProperty("created")]
@@ -53,5 +53,34 @@ public class PeopleDataModel : IDataModel
         Console.WriteLine($"Mass: {Mass}");
         Console.WriteLine($"Skin Color: {SkinColor}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
+    }
+    public string Films => (films != null && films.Any()) ? string.Join("; ", films.Select(a => a)) : string.Empty;
+    public string Starships => (starships != null && starships.Any()) ? string.Join("; ", starships.Select(a => a)) : string.Empty;
+    public string Vehicles => (vehicles != null && vehicles.Any()) ? string.Join("; ", vehicles.Select(a => a)) : string.Empty;
+    public string Species => (species != null && species.Any()) ? string.Join("; ", species.Select(a => a)) : string.Empty;
+}
+
+public class PeopleDataModelMap : ClassMap<PeopleDataModel>
+{
+    public PeopleDataModelMap()
+    {
+        Map(m => m.Name);
+        Map(m => m.BirthYear);
+        Map(m => m.EyeColor);
+        Map(m => m.Gender);
+        Map(m => m.HairColor);
+        Map(m => m.Height);
+        Map(m => m.Mass);
+        Map(m => m.SkinColor);
+        Map(m => m.Homeworld);
+
+        Map(m => m.Films);
+        Map(m => m.Species);
+        Map(m => m.Starships);
+        Map(m => m.Vehicles);
+
+        Map(m => m.Url);
+        Map(m => m.Created);
+        Map(m => m.Edited);
     }
 }

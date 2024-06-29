@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -45,5 +46,34 @@ public class StarshipDataModel : IDataModel
         Console.WriteLine($"MGLT: {MGLT}");
         Console.WriteLine($"Starship Class: {starship_class}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
+    }
+    public string Films => (films != null && films.Any()) ? string.Join("; ", films.Select(a => a)) : string.Empty;
+    public string Pilots => (pilots != null && pilots.Any()) ? string.Join("; ", pilots.Select(a => a)) : string.Empty;
+}
+
+public class StarshipDataModelMap : ClassMap<StarshipDataModel>
+{
+    public StarshipDataModelMap()
+    {
+        Map(m => m.name);
+        Map(m => m.model);
+        Map(m => m.manufacturer);
+        Map(m => m.cost_in_credits);
+        Map(m => m.length);
+        Map(m => m.max_atmosphering_speed);
+        Map(m => m.crew);
+        Map(m => m.cargo_capacity);
+        Map(m => m.passengers);
+        Map(m => m.consumables);
+        Map(m => m.hyperdrive_rating);
+        Map(m => m.MGLT);
+        Map(m => m.starship_class);
+
+        Map(m => m.Films);
+        Map(m => m.Pilots);
+
+        Map(m => m.url);
+        Map(m => m.created);
+        Map(m => m.edited);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -38,4 +39,31 @@ public class SpeciesDataModel : IDataModel
         Console.WriteLine($"Language: {language}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
     }
+    public string Films => (films != null && films.Any()) ? string.Join("; ", films.Select(a => a)) : string.Empty;
+    public string People => (people != null && people.Any()) ? string.Join("; ", people.Select(a => a)) : string.Empty;
 }
+
+public class SpeciesDataModelMap : ClassMap<SpeciesDataModel>
+{
+    public SpeciesDataModelMap()
+    {
+        Map(m => m.name);
+        Map(m => m.classification);
+        Map(m => m.designation);
+        Map(m => m.average_height);
+        Map(m => m.skin_colors);
+        Map(m => m.hair_colors);
+        Map(m => m.eye_colors);
+        Map(m => m.average_lifespan);
+        Map(m => m.homeworld);
+        Map(m => m.language);
+
+        Map(m => m.Films);
+        Map(m => m.People);
+
+        Map(m => m.url);
+        Map(m => m.created);
+        Map(m => m.edited);
+    }
+}
+
