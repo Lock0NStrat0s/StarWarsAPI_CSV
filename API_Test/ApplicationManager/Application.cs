@@ -10,34 +10,31 @@ public static class Application
 {
     static int pageCount = 1;
     #region RUN APPLICATION
-    public static bool RunApplication(bool isRunning)
+    public static bool RunApplication()
     {
         string userInput = Helper.GetResponse("Welcome to the Star Wars Database! (utilizing SWAPI)\n\nOptions:\n1: FULL RESPONSE (data records will be stored in a csv file)\n2: SINGLE RESPONSE (data records will be displayed on console with nice fancy colours)\nAny other key to EXIT\n\nYour Selection: ");
-        isRunning = GetFullOrSingleResponse(isRunning, userInput);
 
-        return isRunning;
+        return GetFullOrSingleResponse(userInput);
     }
 
-    private static bool GetFullOrSingleResponse(bool isRunning, string userInput)
+    private static bool GetFullOrSingleResponse(string userInput)
     {
         if (userInput != "1" && userInput != "2")
         {
-            isRunning = false;
+            return false;
         }
         else
         {
-            isRunning = GetEndpoint(isRunning, userInput);
+            return GetEndpoint(userInput);
         }
-
-        return isRunning;
     }
 
-    private static bool GetEndpoint(bool isRunning, string userInput)
+    private static bool GetEndpoint(string userInput)
     {
         var urlParameter = GetUserEndpoint(Helper.GetResponse("Welcome to the Star Wars Database! (utilizing SWAPI)\n\nOptions:\n1: People\n2: Planets\n3: Starships\n4: Films\n5: Species\n6: Vehicles\nAny other key to EXIT\n\nYour selection: "));
         if (urlParameter == null)
         {
-            isRunning = false;
+            return false;
         }
         else
         {
@@ -51,7 +48,7 @@ public static class Application
             }
         }
 
-        return isRunning;
+        return true;
     }
     #endregion
 

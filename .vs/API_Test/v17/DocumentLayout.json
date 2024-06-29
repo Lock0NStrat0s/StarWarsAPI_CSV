@@ -9,50 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\fullresponsedatamodels\\starshipfulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\fullresponsedatamodels\\starshipfulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\fullresponsedatamodels\\speciesfulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\fullresponsedatamodels\\speciesfulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\fullresponsedatamodels\\vehiclefulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\fullresponsedatamodels\\vehiclefulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\fullresponsedatamodels\\peoplefulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\fullresponsedatamodels\\peoplefulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\fullresponsedatamodels\\planetfulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\fullresponsedatamodels\\planetfulldatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\datamodels\\peopledatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\datamodels\\peopledatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\datamodels\\planetdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\datamodels\\planetdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\datamodels\\vehicledatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\datamodels\\vehicledatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\datamodels\\starshipdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\datamodels\\starshipdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|c:\\users\\moham\\onedrive\\desktop\\repos\\starwars\\starwars_api_test\\api_test\\datamodels\\speciesdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B20EE4BE-008A-42BD-9E19-0D9585237005}|API_Test\\API_Test.csproj|solutionrelative:api_test\\datamodels\\speciesdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,151 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 84,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Application.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\ApplicationManager\\Application.cs",
-              "RelativeDocumentMoniker": "API_Test\\ApplicationManager\\Application.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\ApplicationManager\\Application.cs",
-              "RelativeToolTip": "API_Test\\ApplicationManager\\Application.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T22:30:40.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VehicleFullDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\VehicleFullDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\FullResponseDataModels\\VehicleFullDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\VehicleFullDataModel.cs",
-              "RelativeToolTip": "API_Test\\FullResponseDataModels\\VehicleFullDataModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T22:23:49.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StarshipFullDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\StarshipFullDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\FullResponseDataModels\\StarshipFullDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\StarshipFullDataModel.cs",
-              "RelativeToolTip": "API_Test\\FullResponseDataModels\\StarshipFullDataModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T22:23:49.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SpeciesFullDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\SpeciesFullDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\FullResponseDataModels\\SpeciesFullDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\SpeciesFullDataModel.cs",
-              "RelativeToolTip": "API_Test\\FullResponseDataModels\\SpeciesFullDataModel.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAzwBIAAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T22:23:48.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PeopleFullDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\PeopleFullDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\FullResponseDataModels\\PeopleFullDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\PeopleFullDataModel.cs",
-              "RelativeToolTip": "API_Test\\FullResponseDataModels\\PeopleFullDataModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T22:21:26.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlanetFullDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\PlanetFullDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\FullResponseDataModels\\PlanetFullDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\FullResponseDataModels\\PlanetFullDataModel.cs",
-              "RelativeToolTip": "API_Test\\FullResponseDataModels\\PlanetFullDataModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T22:21:08.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VehicleDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\VehicleDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\DataModels\\VehicleDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\VehicleDataModel.cs",
-              "RelativeToolTip": "API_Test\\DataModels\\VehicleDataModel.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAxwCwAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T20:56:17.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StarshipDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\StarshipDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\DataModels\\StarshipDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\StarshipDataModel.cs",
-              "RelativeToolTip": "API_Test\\DataModels\\StarshipDataModel.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAABDwDIAAAB3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T20:56:16.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SpeciesDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\SpeciesDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\DataModels\\SpeciesDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\SpeciesDataModel.cs",
-              "RelativeToolTip": "API_Test\\DataModels\\SpeciesDataModel.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAqwCcAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T20:56:16.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PlanetDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\PlanetDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\DataModels\\PlanetDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\PlanetDataModel.cs",
-              "RelativeToolTip": "API_Test\\DataModels\\PlanetDataModel.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAIBBwD4AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T20:56:15.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PeopleDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\PeopleDataModel.cs",
-              "RelativeDocumentMoniker": "API_Test\\DataModels\\PeopleDataModel.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\DataModels\\PeopleDataModel.cs",
-              "RelativeToolTip": "API_Test\\DataModels\\PeopleDataModel.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAwD8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T20:56:14.999Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -215,22 +28,22 @@
               "RelativeDocumentMoniker": "API_Test\\Program.cs",
               "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\Program.cs",
               "RelativeToolTip": "API_Test\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T22:55:28.282Z",
+              "WhenOpened": "2024-06-29T22:44:33.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Helper.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\Helper.cs",
-              "RelativeDocumentMoniker": "API_Test\\Helper.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\Helper.cs",
-              "RelativeToolTip": "API_Test\\Helper.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA7wBkAAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "Application.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\ApplicationManager\\Application.cs",
+              "RelativeDocumentMoniker": "API_Test\\ApplicationManager\\Application.cs",
+              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWars_API_Test\\API_Test\\ApplicationManager\\Application.cs",
+              "RelativeToolTip": "API_Test\\ApplicationManager\\Application.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwEMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T14:24:49.998Z",
+              "WhenOpened": "2024-06-29T22:44:31.483Z",
               "EditorCaption": ""
             }
           ]
