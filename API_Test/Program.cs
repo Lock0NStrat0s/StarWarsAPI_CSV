@@ -9,7 +9,7 @@ public class Program
         bool isRunning = true;
         do
         {
-            isRunning = Application.RunApplication(isRunning);
+            isRunning = Application.RunApplication();
 
             Console.Write("\nPress any key to continue: ");
             Console.ReadKey();

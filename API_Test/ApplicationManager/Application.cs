@@ -1,4 +1,5 @@
-﻿using System;
+﻿using API_Test.FullResponseDataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ public static class Application
 
     private static bool GetEndpoint(string userInput)
     {
-        var urlParameter = GetUserEndpoint(Helper.GetResponse("Welcome to the Star Wars Database! (utilizing SWAPI)\n\nOptions:\n1: People\n2: Planets\n3: Starships\n4: Films\n5: Species\n6: Vehicles\nAny other key to EXIT\n\nYour selection: "));
+        var urlParameter = CreateDataModelFromEndpoint(Helper.GetResponse("Welcome to the Star Wars Database! (utilizing SWAPI)\n\nOptions:\n1: People\n2: Planets\n3: Starships\n4: Films\n5: Species\n6: Vehicles\nAny other key to EXIT\n\nYour selection: "));
         if (urlParameter == null)
         {
             return false;
@@ -53,7 +54,7 @@ public static class Application
     #endregion
 
     #region CREATE DATA MODEL
-    private static string GetUserEndpoint(string response)
+    private static string CreateDataModelFromEndpoint(string response)
     {
         try
         {
@@ -69,41 +70,67 @@ public static class Application
     #endregion
 
     #region CALL API
-    public static async Task CallFullModelAPI(string param)
+    private static async Task CallFullModelAPI(string param)
     {
         bool isNextNull = false;
         do
         {
-            var data = "";
-            try
-            {
-                data = await GetFullModelInfo(param);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            var records = DataModelFactory.GetFullDeserializedModel(data, param);
-
-            if (records.next == null)
-            {
-                isNextNull = true;
-            }
-            pageCount++;
-            try
-            {
-                records.RecordResults(isNextNull);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            isNextNull = await GatherRecord(param);
         } while (!isNextNull);
 
     }
 
-    public static void CallSingleModelAPI(string param)
+    private static async Task<bool> GatherRecord(string param)
+    {
+        string data = await GetDataFromModel(param);
+
+        var records = DataModelFactory.GetFullDeserializedModel(data, param);
+
+        return AddRecordIfNextPageExists(records);
+    }
+
+    private static bool AddRecordIfNextPageExists(IFullDataModel records)
+    {
+        if (records.next == null)
+        {
+            return true;
+        }
+        else
+        {
+            pageCount++;                            // Increase page count
+            AddRecord(false, records);
+            return false;
+        }
+    }
+
+    private static void AddRecord(bool isNextNull, IFullDataModel records)
+    {
+        try
+        {
+            records.RecordResults(isNextNull);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private static async Task<string> GetDataFromModel(string param)
+    {
+        var data = "";
+        try
+        {
+            data = await GetFullModelInfo(param);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+        return data;
+    }
+
+    private static void CallSingleModelAPI(string param)
     {
         Console.Write($"Enter the ID of the \"{param.ToUpper()}\" to display: ");
         string id = Console.ReadLine();
