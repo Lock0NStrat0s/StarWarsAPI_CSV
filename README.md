@@ -31,7 +31,7 @@ Users are also able to view individual records on the console.
   -  Writing each record into its respective file
 
 ## Install dependencies
-The folowing packages are installed from the NuGet Package Manager:
+The following packages are installed from the NuGet Package Manager:
   - CsvHelper
   - Newtonsoft.Json
 
