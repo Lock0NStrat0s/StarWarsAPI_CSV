@@ -48,8 +48,8 @@ The following packages are installed from the NuGet Package Manager:
 ### Main Menu
 ![Single Or Full Response](Demo_Images/SingleOrFullResponseImg.png)
 
-### Display Single Response From People Endpoint
+### Single Response Display From People Endpoint
 ![Display Character](Demo_Images/DisplayCharacterImg.png)
 
-### Full Response CSV From People Endpoint
+### Full Response CSV File From People Endpoint
 ![CSV](Demo_Images/CSVImg.png)
