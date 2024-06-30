@@ -44,6 +44,6 @@ The folowing packages are installed from the NuGet Package Manager:
   - View data on the console
 
 ## Images from console
-![Single Or Full Response](SingleOrFullResponseImg.png)
-![Display Character](DisplayCharacterImg.png)
-![CSV](CSVImg.png)
+![Single Or Full Response](Demo_Images/SingleOrFullResponseImg.png)
+![Display Character](Demo_Images/DisplayCharacterImg.png)
+![CSV](Demo_Images/CSVImg.png)
