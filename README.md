@@ -42,3 +42,6 @@ The folowing packages are installed from the NuGet Package Manager:
   - Map the data to C# objects
   - Save the results as CSV files in the *CSV_Files* directory, OR
   - View data on the console
+
+## Images from console
+
