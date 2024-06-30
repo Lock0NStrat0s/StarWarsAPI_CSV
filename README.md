@@ -27,7 +27,7 @@ Users are also able to view individual records on the console.
 
 ### 3. CSV Mapping:
   -  Combining records from each endpoint
-  -  Using a ClassMap to flatten the the IEnumerables inside each data model into a single joined string
+  -  Using a ClassMap to flatten the IEnumerables inside each data model into a single joined string
   -  Writing each record into its respective file
 
 ## Install dependencies
