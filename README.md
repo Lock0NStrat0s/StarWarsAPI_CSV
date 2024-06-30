@@ -30,7 +30,7 @@ Users are also able to view individual records on the console.
   -  Using a ClassMap to flatten the IEnumerables inside each data model into a single joined string
   -  Writing each record into its respective file
 
-## Install dependencies
+## Dependencies Used
 The following packages are installed from the NuGet Package Manager:
   - CsvHelper
   - Newtonsoft.Json
