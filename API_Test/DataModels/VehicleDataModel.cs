@@ -1,9 +1,4 @@
 ﻿using CsvHelper.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API_Test.DataModels;
 
@@ -45,6 +40,7 @@ public class VehicleDataModel : IDataModel
     public string Pilots => (pilots != null && pilots.Any()) ? string.Join("; ", pilots.Select(a => a)) : string.Empty;
 }
 
+// Map the data model to the csv file
 public class VehicleDataModelMap : ClassMap<VehicleDataModel>
 {
     public VehicleDataModelMap()

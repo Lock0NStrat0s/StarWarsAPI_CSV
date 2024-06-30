@@ -1,10 +1,4 @@
 ﻿using CsvHelper.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API_Test.DataModels;
 
@@ -42,6 +36,7 @@ public class PlanetDataModel : IDataModel
     public string Residents => (residents != null && residents.Any()) ? string.Join("; ", residents.Select(a => a)) : string.Empty;
 }
 
+// Map the data model to the csv file
 public class PlanetDataModelMap : ClassMap<PlanetDataModel>
 {
     public PlanetDataModelMap()

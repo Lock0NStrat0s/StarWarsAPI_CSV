@@ -1,17 +1,13 @@
-﻿using CsvHelper.Configuration;
-using CsvHelper;
-using System;
-using System.Collections.Generic;
+﻿using CsvHelper;
+using CsvHelper.Configuration;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Formats.Asn1;
 
 namespace API_Test;
 
+// Helper class to provide common methods
 public static class Helper
 {
+    // Clear console and get user response
     public static string GetResponse(string text)
     {
         Console.Clear();
@@ -19,6 +15,7 @@ public static class Helper
         return Console.ReadLine();
     }
 
+    // Write data to CSV
     public static void WriteDataToCSV<T>(List<T> records, string filePath)
     {
         using (var writer = new StreamWriter(filePath))

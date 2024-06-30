@@ -6,9 +6,10 @@ public class Program
 {
     static void Main(string[] args)
     {
-        bool isRunning = true;
+        bool isRunning = true; // Flag to keep the application running
         do
         {
+            // Run the application
             isRunning = Application.RunApplication();
 
             Console.Write("\nPress any key to continue: ");

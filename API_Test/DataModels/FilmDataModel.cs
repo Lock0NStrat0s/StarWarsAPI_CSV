@@ -1,11 +1,4 @@
 ﻿using CsvHelper.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace API_Test.DataModels;
 
@@ -43,6 +36,7 @@ public class FilmDataModel : IDataModel
     public string Species => (species != null && species.Any()) ? string.Join("; ", species.Select(a => a)) : string.Empty;
 }
 
+// Map the data model to the csv file
 public class FilmDataModelMap : ClassMap<FilmDataModel>
 {
     public FilmDataModelMap()

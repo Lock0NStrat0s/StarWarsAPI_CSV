@@ -2,6 +2,7 @@
 
 namespace API_Test;
 
+// Global variables to store combine full response records
 public static class Globals
 {
     public static List<List<FilmDataModel>> FullFilmResults { get; set; } = new List<List<FilmDataModel>>();

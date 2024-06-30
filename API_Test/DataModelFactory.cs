@@ -4,8 +4,10 @@ using Newtonsoft.Json;
 
 namespace API_Test;
 
-internal static class DataModelFactory
+// Factory class to create the correct data model based on the data type
+public static class DataModelFactory
 {
+    // Returns data model type
     public static string GetDataModelType(string dataType)
     {
         switch (dataType.ToLower())
@@ -26,6 +28,8 @@ internal static class DataModelFactory
                 return "null";
         }
     }
+
+    // Returns deserialized data model for full response
     public static IFullDataModel GetFullDeserializedModel(string data, string param)
     {
         switch (param)
@@ -46,6 +50,8 @@ internal static class DataModelFactory
                 return null;
         }
     }
+
+    // Returns deserialized data model for single response
     public static IDataModel GetSingleDeserializedModel(string data, string param)
     {
         switch (param)
