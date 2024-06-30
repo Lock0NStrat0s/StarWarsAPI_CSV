@@ -44,6 +44,12 @@ The following packages are installed from the NuGet Package Manager:
   - View data on the console
 
 ## Images from console
+
+### Main Menu
 ![Single Or Full Response](Demo_Images/SingleOrFullResponseImg.png)
+
+### Display Single Response From People Endpoint
 ![Display Character](Demo_Images/DisplayCharacterImg.png)
+
+### Full Response CSV From People Endpoint
 ![CSV](Demo_Images/CSVImg.png)
