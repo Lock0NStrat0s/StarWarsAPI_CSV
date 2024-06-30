@@ -1,6 +1,6 @@
-﻿using API_Test.ApplicationManager;
+﻿using StarWarsAPI.ApplicationManager;
 
-namespace API_Test;
+namespace StarWarsAPI;
 
 public class Program
 {

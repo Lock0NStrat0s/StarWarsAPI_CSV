@@ -1,6 +1,7 @@
-﻿using API_Test.DataModels;
+﻿using StarWarsAPI;
+using StarWarsAPI.DataModels;
 
-namespace API_Test.FullResponseDataModels;
+namespace StarWarsAPI.FullResponseDataModels;
 
 public class SpeciesFullDataModel : IFullDataModel
 {

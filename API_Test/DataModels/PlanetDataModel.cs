@@ -1,6 +1,6 @@
 ﻿using CsvHelper.Configuration;
 
-namespace API_Test.DataModels;
+namespace StarWarsAPI.DataModels;
 
 public class PlanetDataModel : IDataModel
 {
@@ -32,8 +32,8 @@ public class PlanetDataModel : IDataModel
         Console.WriteLine($"Population: {population}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
     }
-    public string Films => (films != null && films.Any()) ? string.Join("; ", films.Select(a => a)) : string.Empty;
-    public string Residents => (residents != null && residents.Any()) ? string.Join("; ", residents.Select(a => a)) : string.Empty;
+    public string Films => films != null && films.Any() ? string.Join("; ", films.Select(a => a)) : string.Empty;
+    public string Residents => residents != null && residents.Any() ? string.Join("; ", residents.Select(a => a)) : string.Empty;
 }
 
 // Map the data model to the csv file

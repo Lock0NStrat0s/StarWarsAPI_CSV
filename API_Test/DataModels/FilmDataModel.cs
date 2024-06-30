@@ -1,6 +1,6 @@
 ﻿using CsvHelper.Configuration;
 
-namespace API_Test.DataModels;
+namespace StarWarsAPI.DataModels;
 
 public class FilmDataModel : IDataModel
 {
@@ -29,11 +29,11 @@ public class FilmDataModel : IDataModel
         Console.WriteLine($"Release Date: {release_date}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
     }
-    public string Characters => (characters != null && characters.Any()) ? string.Join("; ", characters.Select(a => a)) : string.Empty;
-    public string Planets => (planets != null && planets.Any()) ? string.Join("; ", planets.Select(a => a)) : string.Empty;
-    public string Starships => (starships != null && starships.Any()) ? string.Join("; ", starships.Select(a => a)) : string.Empty;
-    public string Vehicles => (vehicles != null && vehicles.Any()) ? string.Join("; ", vehicles.Select(a => a)) : string.Empty;
-    public string Species => (species != null && species.Any()) ? string.Join("; ", species.Select(a => a)) : string.Empty;
+    public string Characters => characters != null && characters.Any() ? string.Join("; ", characters.Select(a => a)) : string.Empty;
+    public string Planets => planets != null && planets.Any() ? string.Join("; ", planets.Select(a => a)) : string.Empty;
+    public string Starships => starships != null && starships.Any() ? string.Join("; ", starships.Select(a => a)) : string.Empty;
+    public string Vehicles => vehicles != null && vehicles.Any() ? string.Join("; ", vehicles.Select(a => a)) : string.Empty;
+    public string Species => species != null && species.Any() ? string.Join("; ", species.Select(a => a)) : string.Empty;
 }
 
 // Map the data model to the csv file

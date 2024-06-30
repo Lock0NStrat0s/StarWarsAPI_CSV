@@ -1,7 +1,7 @@
 ﻿using CsvHelper.Configuration;
 using Newtonsoft.Json;
 
-namespace API_Test.DataModels;
+namespace StarWarsAPI.DataModels;
 
 public class PeopleDataModel : IDataModel
 {
@@ -48,10 +48,10 @@ public class PeopleDataModel : IDataModel
         Console.WriteLine($"Skin Color: {SkinColor}");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
     }
-    public string Films => (films != null && films.Any()) ? string.Join("; ", films.Select(a => a)) : string.Empty;
-    public string Starships => (starships != null && starships.Any()) ? string.Join("; ", starships.Select(a => a)) : string.Empty;
-    public string Vehicles => (vehicles != null && vehicles.Any()) ? string.Join("; ", vehicles.Select(a => a)) : string.Empty;
-    public string Species => (species != null && species.Any()) ? string.Join("; ", species.Select(a => a)) : string.Empty;
+    public string Films => films != null && films.Any() ? string.Join("; ", films.Select(a => a)) : string.Empty;
+    public string Starships => starships != null && starships.Any() ? string.Join("; ", starships.Select(a => a)) : string.Empty;
+    public string Vehicles => vehicles != null && vehicles.Any() ? string.Join("; ", vehicles.Select(a => a)) : string.Empty;
+    public string Species => species != null && species.Any() ? string.Join("; ", species.Select(a => a)) : string.Empty;
 }
 
 // Map the data model to the csv file

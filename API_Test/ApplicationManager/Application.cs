@@ -1,6 +1,7 @@
-﻿using API_Test.FullResponseDataModels;
+﻿using StarWarsAPI;
+using StarWarsAPI.FullResponseDataModels;
 
-namespace API_Test.ApplicationManager;
+namespace StarWarsAPI.ApplicationManager;
 
 public static class Application
 {

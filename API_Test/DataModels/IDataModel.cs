@@ -1,4 +1,4 @@
-﻿namespace API_Test.DataModels;
+﻿namespace StarWarsAPI.DataModels;
 
 // Interface for the data model
 public interface IDataModel

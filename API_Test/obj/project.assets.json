@@ -103,9 +103,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWarsAPI_CSV\\API_Test\\API_Test.csproj",
-      "projectName": "API_Test",
-      "projectPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWarsAPI_CSV\\API_Test\\API_Test.csproj",
+      "projectUniqueName": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWarsAPI_CSV\\API_Test\\StarWarsAPI.csproj",
+      "projectName": "StarWarsAPI",
+      "projectPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWarsAPI_CSV\\API_Test\\StarWarsAPI.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Repos\\StarWars\\StarWarsAPI_CSV\\API_Test\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
-﻿using API_Test.DataModels;
-using API_Test.FullResponseDataModels;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using StarWarsAPI.DataModels;
+using StarWarsAPI.FullResponseDataModels;
 
-namespace API_Test;
+namespace StarWarsAPI;
 
 // Factory class to create the correct data model based on the data type
 public static class DataModelFactory

@@ -2,7 +2,7 @@
 using CsvHelper.Configuration;
 using System.Globalization;
 
-namespace API_Test;
+namespace StarWarsAPI;
 
 // Helper class to provide common methods
 public static class Helper

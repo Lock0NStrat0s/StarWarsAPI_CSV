@@ -1,4 +1,4 @@
-﻿namespace API_Test.FullResponseDataModels;
+﻿namespace StarWarsAPI.FullResponseDataModels;
 
 // Interface for the full data model
 public interface IFullDataModel

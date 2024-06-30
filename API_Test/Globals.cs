@@ -1,6 +1,6 @@
-﻿using API_Test.DataModels;
+﻿using StarWarsAPI.DataModels;
 
-namespace API_Test;
+namespace StarWarsAPI;
 
 // Global variables to store combine full response records
 public static class Globals
